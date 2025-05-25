@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Nike</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+      color: #000;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .cart-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .cart-item img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .item-details {
+      flex: 1;
+      margin-left: 1rem;
+    }
+
+    .item-details h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    .item-details p {
+      margin: 0.25rem 0;
+    }
+
+    .item-price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Shopping Cart</h1>
+
+  <div class="cart-container">
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/100" alt="Shoe"/>
+      <div class="item-details">
+        <h3>Nike Air Zoom Pegasus</h3>
+        <p>Size: 10</p>
+        <p>Color: Black</p>
+      </div>
+      <div class="item-price">$120.00</div>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/100" alt="Shoe"/>
+      <div class="item-details">
+        <h3>Nike Revolution 6</h3>
+        <p>Size: 9</p>
+        <p>Color: White</p>
+      </div>
+      <div class="item-price">$90.00</div>
+    </div>
+
+    <div class="total">
+      Total: $210.00
+    </div>
+
+   <a href="file:///C:/Users/USER/Desktop/New%20folder/checkout.html"> <button class="checkout-btn">Proceed to Checkout</button></a>
+  </div>
+
+</body>
+</html>

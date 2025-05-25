@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - Nike</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+      color: #000;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .checkout-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .order-summary {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border-radius: 10px;
+    }
+
+    .order-summary h3 {
+      margin: 0 0 1rem;
+    }
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .order-item .item-name {
+      font-weight: bold;
+    }
+
+    .order-item .item-price {
+      font-weight: normal;
+    }
+
+    .total-price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Checkout</h1>
+
+  <div class="checkout-container">
+    <!-- Billing Information -->
+    <div class="section">
+      <div class="section-title">Billing Information</div>
+      <div class="input-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" placeholder="John Doe" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="1234 Main St" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="New York" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="zip">ZIP Code</label>
+        <input type="text" id="zip" name="zip" placeholder="10001" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="usa">United States</option>
+          <option value="canada">Canada</option>
+          <option value="mexico">Mexico</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Shipping Information -->
+    <div class="section">
+      <div class="section-title">Shipping Information</div>
+      <div class="input-group">
+        <label for="shipping-address">Shipping Address</label>
+        <input type="text" id="shipping-address" name="shipping-address" placeholder="1234 Main St" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="shipping-city">City</label>
+        <input type="text" id="shipping-city" name="shipping-city" placeholder="New York" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="shipping-zip">ZIP Code</label>
+        <input type="text" id="shipping-zip" name="shipping-zip" placeholder="10001" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="shipping-country">Country</label>
+        <select id="shipping-country" name="shipping-country" required>
+          <option value="usa">United States</option>
+          <option value="canada">Canada</option>
+          <option value="mexico">Mexico</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="order-item">
+        <div class="item-name">Nike Air Zoom Pegasus</div>
+        <div class="item-price">$120.00</div>
+      </div>
+      <div class="order-item">
+        <div class="item-name">Nike Revolution 6</div>
+        <div class="item-price">$90.00</div>
+      </div>
+
+      <div class="total-price">
+        Total: $210.00
+      </div>
+    </div>
+
+    <!-- Payment Method -->
+    <div class="section">
+      <div class="section-title">Payment Method</div>
+      <div class="input-group">
+        <label for="card-number">Credit Card Number</label>
+        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9876 5432" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="expiration">Expiration Date</label>
+        <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required/>
+      </div>
+
+      <div class="input-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required/>
+      </div>
+    </div>
+
+    <a href="file:///C:/Users/USER/Desktop/New%20folder/Home.html"><button class="checkout-btn">Complete Purchase</button></a>
+  </div>
+
+</body>
+</html>
